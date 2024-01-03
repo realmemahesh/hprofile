@@ -14,7 +14,7 @@ jobs:
         run: mvn checkstyle:checkstyle
 
       - name: sonarqube-testing
-        run: mvn sonar:sonar -Dsonar.login=${{ seccrets.LOGIN }}
+        run: mvn sonar:sonar -Dsonar.login=${{ secrets.LOGIN }}
              -Dsonar.host.url=${{ secrets.HOST }}  
              -Dsonar.projectKey=${{ secrets.PROJECTKEY }}
              -Dsonar.organization=${{ secrets.ORG }}
